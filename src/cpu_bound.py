@@ -5,6 +5,7 @@ import cv2
 import multiprocessing
 
 
+
 def cpu_compute_task(image, channel=2):
     channel = image[:, :, channel]
     transformed = scipy.signal.convolve2d(channel, np.random.randint(-2, 2, 4).reshape(2, 2))
